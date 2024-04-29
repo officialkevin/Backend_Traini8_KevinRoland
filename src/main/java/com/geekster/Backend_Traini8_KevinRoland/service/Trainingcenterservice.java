@@ -12,10 +12,10 @@ public class Trainingcenterservice {
     @Autowired
     ITrainingCenterrepo trainingCenterrepo;
 
-    public String addTrainingCenter(List<TrainingCenter> newtrainingcenter) {
+    public List<TrainingCenter> addTrainingCenter(List<TrainingCenter> newtrainingcenter) {
 
         trainingCenterrepo.saveAll(newtrainingcenter);
-        return "added";
+        return trainingCenterrepo.findAll();
     }
 
     public List<TrainingCenter> getAllTrainingCenter() {
@@ -24,9 +24,9 @@ public class Trainingcenterservice {
     }
 
 
-    public String addSingleTrainingCenter(TrainingCenter newtrainingcenter) {
+    public List<TrainingCenter> addSingleTrainingCenter(TrainingCenter newtrainingcenter) {
         trainingCenterrepo.save(newtrainingcenter);
-        return "added single trainingcenter";
+        return trainingCenterrepo.findAll();
     }
 
 }

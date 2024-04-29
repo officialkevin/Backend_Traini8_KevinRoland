@@ -29,16 +29,16 @@ public class TrainingCenterController {
     //This api is responsible for posting multiple Trainingcenters as a list
     @PostMapping("addlistoftrainingcenters")
     public ResponseEntity<Object> addListOfTrainingCenter(@Valid @RequestBody List<TrainingCenter> newtrainingcenter) {
-        String result = trainingCenter.addTrainingCenter(newtrainingcenter);
-        return ResponseEntity.ok(newtrainingcenter.get(newtrainingcenter.size()-1));
+        List<TrainingCenter> ListofTrainingcenter = trainingCenter.addTrainingCenter(newtrainingcenter);
+        return ResponseEntity.ok(ListofTrainingcenter);
     }
 
 
     //This api is responsible for posting single training center
     @PostMapping("trainingcenter")
     public ResponseEntity<Object> TrainingCenter(@Valid @RequestBody TrainingCenter newtrainingcenter) {
-         trainingCenter.addSingleTrainingCenter(newtrainingcenter);
-        return ResponseEntity.ok(newtrainingcenter);
+        List<TrainingCenter>SingleTrainingCenter= trainingCenter.addSingleTrainingCenter(newtrainingcenter);
+        return ResponseEntity.ok(SingleTrainingCenter.get(SingleTrainingCenter.size()-1));
     }
 
 

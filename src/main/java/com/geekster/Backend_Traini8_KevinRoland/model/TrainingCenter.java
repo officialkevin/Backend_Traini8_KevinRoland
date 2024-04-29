@@ -30,6 +30,7 @@ public class TrainingCenter {
     @JoinColumn(name = "Address_fk")
     private Address address;
     private int Student_Capacity;
+    @ElementCollection
     private List<String>Courses_Offered;
     @CreationTimestamp
     private String CreatedOn;

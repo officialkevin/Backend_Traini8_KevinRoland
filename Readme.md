@@ -35,6 +35,7 @@ Follow these steps to set up the project locally:
    mvn spring-boot:run
 
 
+
 The application will start running on `http://localhost:8080`.
 
 ## Usage
@@ -42,6 +43,9 @@ The application will start running on `http://localhost:8080`.
   http://localhost:8080/swagger-ui.html
 
 - Use the provided endpoints to manage training centers, such as adding new centers, updating existing ones, and retrieving center details.
+- After running on swagger input the json data 
+- ![image is dead](https://i.ibb.co/YBfRpmn/Screenshot-2024-04-29-123225.png)
+
 
 ## Configuration
 - Database configuration:
